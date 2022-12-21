@@ -189,9 +189,6 @@ def build_sampler(x_train, y_train, argv=None):
         steps_per_epoch=args.steps_per_epoch,
     )
 
-    print('class_list:', list(np.unique(y_train)))
-    print('unique classes:', np.unique(y_train))
-
     return sampler
 
 def build_model(dim, embedding_size=128, distance="cosine", learning_rate=0.0001):
